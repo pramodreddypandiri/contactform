@@ -14,17 +14,20 @@ function App() {
       setContacts([...contacts, contact])
   }
   
-
   useEffect(() => {
-    const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-    console.log("In retrive contacts");
-    console.log(retriveContacts);
-    if(retriveContacts) {
-      console.log(" inside if ")
-      setContacts(retriveContacts)
-      console.log("after set contacts");
-    };
-  },[])
+    const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if (retriveContacts) setContacts(retriveContacts);
+  }, []);
+  // useEffect(() => {
+  //   const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+  //   console.log("In retrive contacts");
+  //   console.log(retriveContacts);
+  //   if(retriveContacts) {
+  //     console.log(" inside if ")
+  //     setContacts(retriveContacts)
+  //     console.log("after set contacts");
+  //   };
+  // },[])
   useEffect(() => {
     console.log("set items");
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts))
