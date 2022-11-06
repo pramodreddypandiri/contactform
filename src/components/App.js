@@ -1,22 +1,30 @@
 //import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import AddContact from './AddContact'
 import ContactList from './ContactList';
 import ContactCard from './ContactCard';
 
 function App() {
+  const [contacts, setContacts] = useState([]);
+  const AddContactHandler = (contact) => {
+      //console.log(contact);
+      setContacts([...contacts, contact])
+  }
   return (
-    <div className="App">
+    <div className="App flex flex-col items-center">
       
-      <Header/>
+      
+        <Header/>
 
-      <AddContact/>
-      {/* <ContactCard/> */}
-      <ContactList/>
+        <AddContact AddContactHandler={AddContactHandler} />
+        
+        <ContactList contacts = {contacts}/>
+        
+      </div>
 
-    </div>
+    
   );
 }
 
