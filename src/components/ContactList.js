@@ -9,8 +9,8 @@ const ContactList = (props) => {
     } 
     )
     return (
-        <div className="flex flex-col items-center my-3">
-            <h2 className="text-left text-xl my-3 font-semibold">Contact list</h2>
+        <div className="flex flex-col items-start my-3">
+            <h2 className="text-left text-xl my-3 font-semibold ">Contact list</h2>
             
                 {renderContactList}
             

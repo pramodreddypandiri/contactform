@@ -18,8 +18,11 @@ class AddContact extends React.Component{
      }
     render() { 
         return (
-            <div className="flex w-[300px] flex-col ">
+            <div className="flex w-[300px] flex-col justify-center ">
+                <div className="flex mb-4 flex-col items-center">
                 <h2 className="text-xl  font-semibold">Add Contact</h2>
+                <div className="w-[100px] h-1 rounded-lg  bg-blue-500"></div>
+                </div>
                 <form className="flex flex-col" onSubmit={this.add}>
                     <div className="flex flex-col my-2">
                         <label className="text-left text-semibold ">Name</label>
